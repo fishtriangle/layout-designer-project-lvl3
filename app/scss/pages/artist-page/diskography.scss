@@ -1,0 +1,25 @@
+.diskography-main-title {
+  text-align: start;
+}
+
+@media (max-width: $full-size) {
+  .diskography-main-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: $small-size) {
+  .diskography-main-title {
+    text-align: start;
+  }
+}
+
+.diskography-album-name {
+  margin: 0;
+}
+
+@media (max-width: $full-size) {
+  .diskography-album-name {
+    width: 138px;
+  }
+}

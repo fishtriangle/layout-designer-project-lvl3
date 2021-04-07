@@ -1,0 +1,47 @@
+.simular-artists-main-title {
+  text-align: start;
+}
+
+@media (max-width: $full-size) {
+  .simular-artists-main-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: $small-size) {
+  .simular-artists-main-title {
+    text-align: start;
+  }
+}
+
+.simular-artists-name {
+  width: 100%;
+  margin: 0;
+
+  text-align: center;
+}
+
+.simular-artists-fans {
+  @extend .text-small;
+
+  width: 100%;
+  margin: 0;
+
+  text-align: center;
+}
+
+.simular-artists-fans-description {
+  display: inline;
+  width: fit-content;
+}
+
+@media (max-width: $full-size) {
+  .simular-artists-fans {
+    font-size: 16px;
+  }
+
+  .simular-artists-fans-description {
+    display: block;
+    width: 100%;
+  }
+}

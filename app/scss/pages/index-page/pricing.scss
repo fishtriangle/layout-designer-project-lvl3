@@ -1,0 +1,108 @@
+.pricing-secondary-title {
+  width: 100%;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 4px;
+
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (max-width: $full-size) {
+  .pricing-secondary-title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: $full-size) {
+  .pricing-cards {
+    justify-content: space-around;
+  }
+}
+
+.pricing-item {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  max-width: 367px;
+  margin: 46px 0 0 0;
+  padding: 21px 1.5rem 66px 1.5rem;
+
+  border-radius: 1rem;
+}
+
+@media (max-width: $full-size) {
+  .pricing-item {
+    max-width: 374px;
+    padding: 18px 1.5rem 66px 1.5rem;
+  }
+}
+
+.pricing-value {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 200px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: $full-size) {
+  .pricing-value {
+    margin-bottom: 40px;
+  }
+}
+
+.pricing-number {
+  height: 64px;
+  margin: 0 16px 0 0;
+  padding: 0;
+
+  line-height: 1em;
+}
+
+.pricing-roubles {
+  position: relative;
+  top: 0;
+
+  text-transform: uppercase;
+}
+
+.pricing-footer {
+  margin: 64px 0 0 0;
+
+  text-align: center;
+}
+
+.pricing-bg-free {
+  background-image: url("../images/subscribe_1.png");
+
+  @include backgr-picture;
+}
+
+.pricing-bg-standart {
+  background-image: url("../images/subscribe_2.png");
+
+  @include backgr-picture;
+}
+
+.pricing-bg-premium {
+  background-image: url("../images/subscribe_3.png");
+
+  @include backgr-picture;
+}
+
+.pricing-ps {
+  margin: 39px 0 0 0;
+
+  text-align: center;
+}

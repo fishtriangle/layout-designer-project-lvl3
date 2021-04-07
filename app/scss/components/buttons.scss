@@ -1,0 +1,96 @@
+.btn {
+  width: 100%;
+  padding: 21px 30px;
+
+  color: $primary-text-color;
+  text-transform: uppercase;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.btn-green {
+  font-size: 13.3px;
+  line-height: 15px;
+
+  background-color: $green-color;
+  border: 0;
+}
+
+.btn-white-n-alpha {
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: $base-text-color;
+  text-align: center;
+  text-decoration: none;
+
+  border: 1px solid $primary-text-color;
+}
+
+.btn-white-n-alpha-small {
+  @extend .btn-white-n-alpha;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-size: 12.8px;
+}
+
+@media (max-width: 1239px) {
+  .btn-white-n-alpha-small {
+    font-weight: normal;
+    font-size: 12.8px;
+  }
+}
+
+.btn-application {
+  width: fit-content;
+  padding: 16px 40px 16px 40px;
+
+  font-size: 12.8px;
+  text-transform: none;
+  text-decoration: none;
+
+  background-color: $red;
+  border: 0;
+  border-radius: 2rem;
+}
+
+.btn-intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  width: 200px;
+  min-width: 200px;
+  height: 62px;
+  margin-right: 1.5em;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-weight: normal;
+  font-size: 12.8px;
+  text-decoration: none;
+
+  border: 0;
+
+  p {
+    @extend .text-small;
+
+    margin: 0;
+
+    text-transform: uppercase;
+  }
+}
+
+.btn-red {
+  background-color: $red;
+}
+
+.btn-purple {
+  background-color: $purple;
+}

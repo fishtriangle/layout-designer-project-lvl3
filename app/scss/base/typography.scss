@@ -1,0 +1,150 @@
+@font-face {
+  font-weight: normal;
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: 'Arial';
+  src: url('../fonts/Arial/arial.ttf');
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.h3-capitalize {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 45px;
+  text-transform: capitalize;
+}
+
+.h3-capitalize-bold {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 45px;
+  text-transform: capitalize;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.h4-capitalize-bold {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+
+.text-size-7 {
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 150%;
+}
+
+.text-size-6 {
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 150%;
+}
+
+.text-size-5 {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 150%;
+}
+
+.text-size-4 {
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.text-size-3 {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+.text-size-2 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.text-size-1 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.text-small {
+  font-weight: normal;
+  font-size: 12.8px;
+  line-height: 150%;
+}
+
+.popular-track-small-bold {
+  font-weight: bold;
+  font-size: 12.8px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+@media (max-width: $medium-size) {
+  h1 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+}
