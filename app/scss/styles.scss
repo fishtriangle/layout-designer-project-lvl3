@@ -1,0 +1,24 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./base/typography";
+@import "./base/general";
+
+@import "./components/buttons";
+
+@import "./layout/structure";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/chatmobile";
+@import "./layout/chatdesktop";
+@import "./layout/chatlist";
+@import "./layout/contacts";
+@import "./layout/hello";
+@import "./layout/profile";
+
+@import "./pages/index";
+@import "./pages/chat";
+
+@import "./base/atomic";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -53,7 +53,7 @@ const browsersync = () => {
 
 // Преобразование паг-html
 const buildHTML = () => {
-	return src('app/pug/**/*.pug')
+	return src('app/pug/*.pug')
   .pipe(pug())
   .pipe(dest('app/'))
 }
@@ -71,7 +71,7 @@ const makesprite = () => {
 
 // Преобразование стилей
 const scss = () => {
-	return src('app/scss/app.scss') // Выбираем источник
+	return src('app/scss/styles.scss') // Выбираем источник
 	.pipe(sass()) // Преобразуем значение переменной "preprocessor" в функцию
 	.pipe(concat('styles.css')) // Конкатенируем в файл
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
@@ -99,7 +99,7 @@ const buildcopy = () => {
 	return src([ // Выбираем нужные файлы
 		'app/css/styles.css',
 		'app/images/dest/**/*',
-		'app/**/*.html',
+		'app/*.html',
 		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
 	.pipe(dest('build')) // Выгружаем в папку с финальной сборкой
 }
@@ -152,4 +152,4 @@ exports.lintscss = lintScssTask;
 exports.build = series(cleanbuild, buildHTML, scss, images, makesprite, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(buildHTML, scss, images, makesprite, browsersync, startwatch);
+exports.default = series(cleanbuild, buildHTML, scss, images, makesprite, browsersync, startwatch);
