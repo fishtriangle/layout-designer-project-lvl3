@@ -1,11 +1,9 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
-
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./base/typography";
 @import "./base/general";
-
-@import "./components/buttons";
-
+@import "./components/avatar";
 @import "./layout/structure";
 @import "./layout/header";
 @import "./layout/footer";
@@ -15,10 +13,6 @@
 @import "./layout/contacts";
 @import "./layout/hello";
 @import "./layout/profile";
-
 @import "./pages/index";
 @import "./pages/chat";
-
 @import "./base/atomic";
-
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";

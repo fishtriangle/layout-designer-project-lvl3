@@ -46,6 +46,7 @@ let config = {
 const browsersync = () => {
 	browserSync.init({
 		server: { baseDir: 'app/' },
+		watch: true,
 		notify: false,
 		online: false
 	})
@@ -118,7 +119,8 @@ const startwatch = () => {
 
   watch('app/images/source/**/*.svg', makesprite);
 
-  watch('app/pug/**/*', buildHTML);
+  watch('app/pug/**/*.pug', buildHTML);
+	watch('app/pug/*.pug', buildHTML);
 }
 
 const lintScssTask = () => {
@@ -148,8 +150,10 @@ exports.makesprite = makesprite;
 
 exports.lintscss = lintScssTask;
 
+exports.startwatch = startwatch;
+
 // Создаём новый таск "build", который последовательно выполняет нужные операции
 exports.build = series(cleanbuild, buildHTML, scss, images, makesprite, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = series(cleanbuild, buildHTML, scss, images, makesprite, browsersync, startwatch);
+exports.default = parallel(cleanbuild, buildHTML, scss, images, makesprite, browsersync, startwatch);

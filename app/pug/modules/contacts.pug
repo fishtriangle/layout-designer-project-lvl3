@@ -1,4 +1,56 @@
-//- contacts.pug
-.container
-  .row
-    .col
+-
+  let contacts = {
+    "A": [{
+      name: "Алексей Примадонин",
+      status: "Онлайн",
+      avatar: "images/dest/avatar_3.jpg"
+    }],
+
+    "В": [{
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "images/dest/avatar_4.jpg"
+    }],
+
+    "Д": [{
+      name: "Джедай Падаванов",
+      status: "Был онлайн вчера",
+      avatar: "images/dest/avatar_2.jpg"
+    }],
+
+    "К": [{
+      name: "Кодовёнок Хекслетович",
+      status: "Был онлайн 3 часа назад",
+      avatar: "images/dest/avatar_1.jpg"
+    },
+    {
+      name: "Королева Верстальщина",
+      status: "Была онлайн вчера",
+      avatar: "images/dest/avatar_5.jpg"
+    }],
+
+    "П": [{
+      name: "Питонист Джангович",
+      status: "Был онлайн вчера",
+      avatar: "images/dest/avatar_6.jpg"
+    }],
+  }
+
+.contacts
+  h1.h2(class=['pb-3']) Контакты
+  form
+    .form-group
+      label.sr-only(for="search") Поиск контакта
+      input.form-control(type="text", placeholder="Поиск по контактам") 
+  
+  each val, index in contacts
+    p.text-muted(class="mt-5")= index
+    each person in val
+      a.card(href="#")
+      .row
+        img.avatar(src= person.avatar)
+        .card-body
+          h2.card-title= person.name
+          p.card-text= person.status
+      
+

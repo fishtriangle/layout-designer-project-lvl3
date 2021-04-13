@@ -9,32 +9,25 @@ html(lang='ru')
 
     title Designer project lvl3
 
-    link(rel='stylesheet' href='./styles/styles.css')
+    link(rel='stylesheet' href='./css/styles.css')
   
   body
-    //- Подключение шапки сайта
-    include modules/header.pug
-
     main
       .container
         .row
-          .col
-            .block-left(class=['pt-5 px-4'])
-              .row
-                .col
-                  include modules/contacts.pug
-                .col
-                  include modules/chatlist.pug
-                .col
-                  include modules/profile.pug
-                .col
-                  include modules/chatmobile.pug
-            .block-right
-              .row
-                .col
-                  include modules/hello.pug
-                .col
-                  include modules/chatdesktop.pug
+          .block-left(class=['col-4 pt-5 px-4'])
+              //- Подключение шапки сайта
+              include modules/header.pug
+              include modules/contacts.pug
+              include modules/chatlist.pug
+              include modules/profile.pug
+              include modules/chatmobile.pug
+          .block-right(class=['col-8 pt-5 px-4'])
+            .row
+              .col
+                include modules/hello.pug
+              .col
+                include modules/chatdesktop.pug
 
       //- include:markdown-it includes/main.md
 
