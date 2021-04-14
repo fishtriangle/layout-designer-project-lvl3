@@ -46,11 +46,10 @@
   each val, index in contacts
     p.text-muted(class="mt-5")= index
     each person in val
-      a.card(href="#")
-      .row
-        img.avatar(src= person.avatar)
-        .card-body
-          h2.card-title= person.name
-          p.card-text= person.status
+      a.contact-card(href="#" class="shadow-sm text-reset text-decoration-none")
+        img.avatar(src= person.avatar class="mr-4")
+        .contact-body
+          h2.contact-name(class="m-0 text-bold")= person.name
+          p.contact-status(class="m-0 text-small")= person.status
       
 

@@ -15,7 +15,7 @@ html(lang='ru')
     main
       .container
         .row
-          .block-left(class=['col-4 pt-5 px-4'])
+          .block-left(class=['col-4 pt-5 px-4 border-right'])
               //- Подключение шапки сайта
               include modules/header.pug
               include modules/contacts.pug
@@ -23,11 +23,8 @@ html(lang='ru')
               include modules/profile.pug
               include modules/chatmobile.pug
           .block-right(class=['col-8 pt-5 px-4'])
-            .row
-              .col
-                include modules/hello.pug
-              .col
-                include modules/chatdesktop.pug
+            include modules/hello.pug
+            include modules/chatdesktop.pug
 
       //- include:markdown-it includes/main.md
 
