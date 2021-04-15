@@ -1,4 +1,11 @@
 .block-right {
   position: fixed;
   right: 0;
+  display: none;
+}
+
+@include media-breakpoint-up(lg) {
+  .block-right {
+    display: block;
+  }
 }

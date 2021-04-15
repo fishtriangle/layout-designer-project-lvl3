@@ -39,17 +39,17 @@
 .contacts
   h1.h2(class=['pb-3']) Контакты
   form
-    .form-group
+    .form-group(class="border-bottom border-gray-base mb-2")
       label.sr-only(for="search") Поиск контакта
-      input.form-control(type="text", placeholder="Поиск по контактам") 
-  
-  each val, index in contacts
-    p.text-muted(class="mt-5")= index
-    each person in val
-      a.contact-card(href="#" class="shadow-sm text-reset text-decoration-none")
-        img.avatar(src= person.avatar class="mr-4")
-        .contact-body
-          h2.contact-name(class="m-0 text-bold")= person.name
-          p.contact-status(class="m-0 text-small")= person.status
+      input.form-control(type="text", placeholder="Поиск по контактам" class="py-3 contact-form-text border-0") 
+  ul.contact-list(class="list-group")
+    each val, index in contacts
+      p.contact-abc(class="mb-2 text-muted")= index
+      each person in val
+        a.contact-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2 list-group-item list-group-item-action")
+          img.avatar(src= person.avatar class="mr-4")
+          .contact-body(class="p-4")
+            h2.contact-name(class="m-0 text-bold")= person.name
+            p.contact-status(class="m-0 text-small")= person.status
       
 

@@ -15,18 +15,18 @@ html(lang='ru')
     main
       .container
         .row
-          .block-left(class=['col-4 pt-5 px-4 border-right'])
+          .block-left(class=['col-sm-12 col-lg-4 pt-5 px-4 border-right'])
               //- Подключение шапки сайта
               include modules/header.pug
               include modules/contacts.pug
               include modules/chatlist.pug
               include modules/profile.pug
               include modules/chatmobile.pug
-          .block-right(class=['col-8 pt-5 px-4'])
+          .block-right(class=['col-lg-8 pt-5 px-4'])
             include modules/hello.pug
             include modules/chatdesktop.pug
 
       //- include:markdown-it includes/main.md
 
     //- Подключение футера сайта
-    include modules/footer.pug
+    //- include modules/footer.pug
