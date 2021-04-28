@@ -1,7 +1,8 @@
 body {
   height: 100vh;
 
-  @include hide-scrollbar();
+  overflow-x: hidden;
+  // @include hide-scrollbar();
 }
 
 .container-xxl {

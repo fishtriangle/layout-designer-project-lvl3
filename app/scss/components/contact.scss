@@ -1,7 +1,13 @@
-//- .contact-list {
-//-   height: calc(100vh - 164px);
-//-   overflow: auto;
-//- }
+.contacts {
+  overflow: hidden;
+}
+
+.contact-list {
+  height: calc(100vh - 164px);
+  //-   overflow: auto;
+
+  @include hide-scrollbar();
+}
 
 .contact-card {
   display: flex;
