@@ -1,0 +1,66 @@
+.chats {
+  overflow: hidden;
+}
+
+.chat-list {
+  height: calc(100vh - 164px);
+  //-   overflow: auto;
+
+  @include hide-scrollbar();
+}
+
+.chat-last-time {
+  height: 19px;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.chat-last-message {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chat-name {
+  padding-right: 10px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chat-card {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  height: 90px;
+  padding: 0 1rem;
+
+  &:hover {
+    background-color: $primary;
+
+    .chat-name,
+    .chat-last-message,
+    .chat-last-time {
+      color: $white;
+    }
+  }
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+.chat-title {
+  display: flex;
+}
+
+.chat-form-text {
+  height: 3rem;
+}

@@ -1,0 +1,59 @@
+.contacts {
+  overflow: hidden;
+}
+
+.contact-list {
+  height: calc(100vh - 164px);
+  //-   overflow: auto;
+
+  @include hide-scrollbar();
+}
+
+.contact-status {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.contact-name {
+  padding-right: 10px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  height: 90px;
+  padding: 20px 24px 20px 16px;
+
+  &:hover {
+    background-color: $primary;
+
+    .contact-name,
+    .contact-status {
+      color: $white;
+    }
+  }
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+.contact-form-text {
+  height: 3rem;
+}
+
+.contact-abc {
+  margin-top: 42px;
+}

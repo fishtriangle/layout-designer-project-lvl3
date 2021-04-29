@@ -1,4 +1,41 @@
 //- chatlist.pug
-.container
-  .row
-    .col
+-
+  let chats = {
+    "11:45": [{
+      name: "Вениамин Редакторович",
+      lastMessage: "o_O",
+      avatar: "images/dest/avatar_4.jpg",
+    }],
+
+    "10:12": [{
+      name: "Джедай Падаванов",
+      lastMessage: "Привет, скоро третий проект? Уже скоро надо...",
+      avatar: "images/dest/avatar_2.jpg",
+    }],
+
+    "08:53": [{
+      name: "Алексей Примадонин",
+      lastMessage: "Тесты упали >_<",
+      avatar: "images/dest/avatar_3.jpg",
+    }],
+  }
+
+.chats
+  h1.h2(class=['pb-3']) Чаты
+  form
+    .form-group(class="border-bottom border-gray-base mb-2")
+      label.sr-only(for="search") Поиск по сообщениям
+      input.form-control(type="text", placeholder="Поиск по сообщениям" class="py-3 chat-form-text border-0") 
+  ul.chat-list(class="list-group")
+    each val, index in chats
+      each person in val
+        a.chat-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2 mx-1")
+          img.avatar(src= person.avatar)
+          .chat-body
+            .chat-title
+              h2.chat-name(class="text-bold")= person.name
+              p.chat-last-time(class="text-small")= index
+            p.chat-last-message(class="text-small")= person.lastMessage
+          
+      
+
