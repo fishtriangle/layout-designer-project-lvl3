@@ -1,4 +1,23 @@
 //- header.pug
-header.container
-  .row
-    .col
+header.header-block(class="border-gray-base shadow-sm text-reset text-decoration-none my-2 mx-1")
+  .nav
+    a(href="#")
+      li
+        svg(width="16" viewbox="0 0 160 270" height="27")
+          use(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#logo")
+    div
+      a(href="#")
+        li
+          svg.fill-black(width="25" viewbox="0 0 25 25" height="25")
+            use.fill-black(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#people")
+          span Контакты
+        li
+          svg
+            use(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#chat")
+            a(href="#")
+          span Сообщения
+        li
+          svg
+            use(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#person")
+          span Профиль
+    

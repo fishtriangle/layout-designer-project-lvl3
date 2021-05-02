@@ -29,16 +29,19 @@ const pug = require('gulp-pug');
 
 // Подключаем модуль sprite 
 const svgSprite = require('gulp-svg-sprite');
+//const gulpSpriteSmith = require('gulp.spritesmith');
+//const gulpStylus = require('gulp-stylus');
 
 const gulpStylelint = require('gulp-stylelint');
 
 let config = {
   mode: {
     css: { // Activate the «css» mode
+			sprite: "svg/sprite.css.svg",
       render: {
-        css: true // Activate CSS output (with default options)
+        css: false // Activate CSS output (with default options)
       }
-    }
+    },
   }
 };
 
@@ -69,6 +72,8 @@ const makesprite = () => {
   .pipe(svgSprite(config))
   .pipe(dest('app/images/dest/sprite'))
 }
+
+
 
 // Преобразование стилей
 const scss = () => {
