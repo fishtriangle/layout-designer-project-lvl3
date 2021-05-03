@@ -1,9 +1,40 @@
+.header-main {
+  display: flex;
+}
+
+@include media-breakpoint-up(lg) {
+  .header-main {
+    border-radius: 16px 0px 0px 0px;
+  }
+}
+
+.header-menu {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
 .header-logo {
   display: flex;
   width: auto;
   height: auto;
 }
 
-.fill-black {
-  fill: black;
+.header-icon-small {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: $white;
+  margin-right: 0.5rem;
+}
+
+.header-icon-hexlet {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: $white;
+}
+
+.header-link {
+  color: $white;
+  display: flex;
+  align-items: center;
 }

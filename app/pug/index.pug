@@ -12,21 +12,20 @@ html(lang='ru')
     link(rel='stylesheet' href='./css/styles.css')
   
   body
-    main
-      .container
-        .row
-          .block-left(class=['col-sm-12 col-lg-4 pt-5 px-4 border-right'])
-              //- Подключение шапки сайта
-              include modules/header.pug
-              include modules/contacts.pug
-              include modules/chatlist.pug
-              //- include modules/profile.pug
-              //- include modules/chatmobile.pug
-          .block-right(class=['col-lg-8 pt-5 px-4'])
-            //- include modules/hello.pug
-            //- include modules/chatdesktop.pug
+    main(class="m-4")
+      .row
+        .block-left(class=['col-sm-12 col-lg-4 border-right p-0'])
+          //- Подключение шапки сайта
+          include modules/header.pug
+          include modules/contacts.pug
+          include modules/chatlist.pug
+          //- include modules/profile.pug
+          //- include modules/chatmobile.pug
+        .block-right(class=['col-lg-8 pt-5 bg-danger'])
+          //- include modules/hello.pug
+          //- include modules/chatdesktop.pug
 
-      //- include:markdown-it includes/main.md
+    //- include:markdown-it includes/main.md
 
-    //- Подключение футера сайта
-    //- include modules/footer.pug
+  //- Подключение футера сайта
+  //- include modules/footer.pug

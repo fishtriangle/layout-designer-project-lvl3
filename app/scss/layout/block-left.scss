@@ -1,3 +1,4 @@
 .block-left {
   @include hide-scrollbar();
+  overflow-y: hidden;
 }

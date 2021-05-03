@@ -1,23 +1,20 @@
 //- header.pug
-header.header-block(class="border-gray-base shadow-sm text-reset text-decoration-none my-2 mx-1")
-  .nav
-    a(href="#")
-      li
-        svg(width="16" viewbox="0 0 160 270" height="27")
-          use(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#logo")
-    div
-      a(href="#")
-        li
-          svg.fill-black(width="25" viewbox="0 0 25 25" height="25")
-            use.fill-black(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#people")
-          span Контакты
-        li
-          svg
-            use(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#chat")
-            a(href="#")
-          span Сообщения
-        li
-          svg
-            use(xlink:href="images/dest/sprite/css/svg/sprite.css-82ba862f.svg#person")
-          span Профиль
+header.header-main(class="bg-primary text-white p-4 text-small")
+  a.header-link(href="#" class="text-reset text-decoration-none text-white")
+    svg.header-icon-hexlet
+      use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#logo")
+  nav.header-menu
+    a.header-link(href="#" class="text-reset text-decoration-none")
+      svg.header-icon-small
+        use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#people")
+      span Контакты
+    a.header-link(href="#" class="text-reset text-decoration-none")
+      svg.header-icon-small
+        use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#chat")
+        a(href="#")
+      span Сообщения
+    a.header-link(href="#" class="text-reset text-decoration-none")
+      svg.header-icon-small
+        use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#person")
+      span Профиль
     

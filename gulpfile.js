@@ -35,14 +35,14 @@ const svgSprite = require('gulp-svg-sprite');
 const gulpStylelint = require('gulp-stylelint');
 
 let config = {
+	shape: {
+		dimension: {
+			attributes: false
+		}
+	},
   mode: {
-    css: { // Activate the «css» mode
-			sprite: "svg/sprite.css.svg",
-      render: {
-        css: false // Activate CSS output (with default options)
-      }
-    },
-  }
+    stack: true
+  }	
 };
 
 // Вывод в браузер
