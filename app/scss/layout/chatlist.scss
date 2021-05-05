@@ -1,12 +1,17 @@
 .chats {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  height: 80%;
 }
 
 .chat-list {
-  height: calc(100vh - 164px);
+  height: calc(100vh - 111px);
   //-   overflow: auto;
 
   @include hide-scrollbar();
+  display: flex;
 }
 
 .chat-last-time {

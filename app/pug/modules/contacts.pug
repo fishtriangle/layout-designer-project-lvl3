@@ -34,9 +34,20 @@
       status: "Был онлайн вчера",
       avatar: "images/dest/avatar_6.jpg"
     }],
+
+    "Я": [{
+      name: "Питонист Джангович",
+      status: "Был онлайн вчера",
+      avatar: "images/dest/avatar_6.jpg"
+    },
+    {
+      name: "Королева Верстальщина",
+      status: "Была онлайн вчера",
+      avatar: "images/dest/avatar_5.jpg"
+    }],
   }
 
-.contacts(class="px-4")
+.contacts(class="px-4 pt-5 tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
   h1.h2(class=['pb-3']) Контакты
   form
     .form-group(class="border-bottom border-gray-base mb-2")
@@ -46,10 +57,11 @@
     each val, index in contacts
       p.contact-abc(class="mb-2 text-muted")= index
       each person in val
-        a.contact-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2 mx-1")
-          img.avatar(src= person.avatar)
-          .contact-body
-            h2.contact-name(class="text-bold")= person.name
-            p.contact-status(class="text-small")= person.status
-      
+        li
+          a.contact-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2 mx-1")
+            img.avatar(src= person.avatar)
+            .contact-body
+              h2.contact-name(class="text-bold")= person.name
+              p.contact-status(class="text-small")= person.status
+          
 

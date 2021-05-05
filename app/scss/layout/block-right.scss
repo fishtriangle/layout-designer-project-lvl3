@@ -1,7 +1,6 @@
 .block-right {
   display: none;
   overflow-y: hidden;
-  height: 50px;
 }
 
 @include media-breakpoint-up(lg) {

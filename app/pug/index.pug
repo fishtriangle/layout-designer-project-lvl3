@@ -12,16 +12,17 @@ html(lang='ru')
     link(rel='stylesheet' href='./css/styles.css')
   
   body
-    main(class="m-4")
+    main(class="m-0 m-lg-4 h-100")
       .row
-        .block-left(class=['col-sm-12 col-lg-4 border-right p-0'])
+        .block-left(class=['col-sm-12 col-lg-4 p-0'])
           //- Подключение шапки сайта
           include modules/header.pug
-          include modules/contacts.pug
-          include modules/chatlist.pug
-          //- include modules/profile.pug
-          //- include modules/chatmobile.pug
-        .block-right(class=['col-lg-8 pt-5 bg-danger'])
+          .tab-content(id="myTabContent")
+            include modules/contacts.pug
+            include modules/chatlist.pug
+            //- include modules/profile.pug
+            //- include modules/chatmobile.pug
+        .block-right(class=['col-lg-8 border-left border-gray-base'])
           //- include modules/hello.pug
           //- include modules/chatdesktop.pug
 

@@ -10,8 +10,7 @@
 
 .header-menu {
   display: flex;
-  flex: 1;
-  justify-content: space-evenly;
+  flex-wrap: nowrap;
 }
 
 .header-logo {
@@ -37,4 +36,9 @@
   color: $white;
   display: flex;
   align-items: center;
+}
+
+.nav-link {
+  padding: 0;
+  margin: .5rem 2rem .5rem 0;
 }
