@@ -37,6 +37,8 @@ const svgSprite = require('gulp-svg-sprite');
 
 const gulpStylelint = require('gulp-stylelint');
 
+const babel = require('gulp-babel');
+
 let config = {
 	shape: {
 		dimension: {
@@ -52,9 +54,10 @@ let config = {
 const browsersync = () => {
 	browserSync.init({
 		server: { baseDir: 'app/' },
+		files: "*.html",
 		watch: true,
 		notify: false,
-		online: false
+		online: true
 	})
 }
 
@@ -76,6 +79,7 @@ const scripts = () => {
 		'node_modules/bootstrap/dist/js/bootstrap.min.js',
 		//'app/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 		])
+		.pipe(babel())
 		.pipe(concat('app.min.js')) // Конкатенируем в один файл
 		.pipe(uglify()) // Сжимаем JavaScript
 		.pipe(dest('app/js/')) // Выгружаем готовый файл в папку назначения
