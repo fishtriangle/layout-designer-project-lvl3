@@ -5,6 +5,9 @@ const browserSync = require('browser-sync').create();
  
 // Подключаем gulp-concat
 const concat = require('gulp-concat');
+
+// Подключаем gulp-uglify-es
+const uglify = require('gulp-uglify-es').default;
  
 // Подключаем модуль gulp-sass
 const sass = require('gulp-sass');
@@ -66,6 +69,20 @@ const deleteHTML = () => {
   return del('app/**/*.html', { force: true })
 }
 
+const scripts = () => {
+	return src([ // Берём файлы из источников
+		'node_modules/jquery/dist/jquery.slim.min.js',
+		'node_modules/popper.js/dist/popper.min.js',
+		'node_modules/bootstrap/dist/js/bootstrap.min.js',
+		//'app/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+		])
+		.pipe(concat('app.min.js')) // Конкатенируем в один файл
+		.pipe(uglify()) // Сжимаем JavaScript
+		.pipe(dest('app/js/')) // Выгружаем готовый файл в папку назначения
+		.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
+}
+
+
 // Преобразование svg - sprite
 const makesprite = () => {
 	return src('app/images/source/icons/*.svg')
@@ -104,6 +121,7 @@ const cleanimg = () => {
 const buildcopy = () => {
 	return src([ // Выбираем нужные файлы
 		'app/css/styles.css',
+		'app/js/app.min.js',
 		'app/images/dest/**/*',
 		'app/*.html',
 		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
@@ -126,6 +144,8 @@ const startwatch = () => {
 
   watch('app/pug/**/*.pug', buildHTML);
 	watch('app/pug/*.pug', buildHTML);
+
+	watch('app/js/*.js', scripts);
 }
 
 const lintScssTask = () => {
@@ -139,6 +159,9 @@ const lintScssTask = () => {
 
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
 exports.browsersync = browsersync;
+
+// Экспортируем функцию scripts() в таск scripts
+exports.scripts = scripts;
 
 // Экспортируем функцию styles() в таск styles
 exports.scss = scss;
@@ -158,7 +181,7 @@ exports.lintscss = lintScssTask;
 exports.startwatch = startwatch;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
-exports.build = series(cleanbuild, buildHTML, scss, images, makesprite, buildcopy);
+exports.build = series(cleanbuild, scripts, buildHTML, scss, images, makesprite, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(cleanbuild, buildHTML, scss, images, makesprite, browsersync, startwatch);
+exports.default = series(scripts, buildHTML, scss, images, makesprite, browsersync, startwatch);

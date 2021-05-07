@@ -31,8 +31,12 @@
     "gulp-sass": "^4.1.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify-es": "^2.0.0",
     "htmlhint": "^0.14.2",
+    "jquery": "^3.6.0",
+    "ngx-popper": "^7.0.0",
     "node-sass": "^5.0.0",
+    "popper.js": "^1.16.1",
     "stylelint": "^13.12.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^21.0.0",
@@ -40,8 +44,6 @@
     "stylelint-scss": "^3.19.0"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0",
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1"
+    "bootstrap": "^4.6.0"
   }
 }
