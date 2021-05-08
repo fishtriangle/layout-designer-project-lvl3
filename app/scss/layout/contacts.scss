@@ -1,17 +1,17 @@
 .contacts {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
   height: 81%;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .contact-list {
-  height: calc(100vh - 164px);
+  display: flex;
+  height: calc(100vh - 300px);
   //-   overflow: auto;
 
   @include hide-scrollbar();
-  display: flex;
 }
 
 .contact-status {
@@ -49,8 +49,8 @@
 
 .contact-body {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   padding: 1.5rem;
   overflow-x: hidden;
 }

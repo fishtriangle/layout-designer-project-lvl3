@@ -1,11 +1,10 @@
 //- header.pug
 header.header-main(class="bg-primary text-white py-4 pl-3 pr-0 text-small")
-  ul.nav(class="d-flex justify-content-between w-100"  id="myTab" role="tablist")
-    li.nav-item(role="presentation")
-      a.header-link(href="#" class="text-reset text-decoration-none text-white mr-4 mr-xl-0")
-        svg.header-icon-hexlet
-          use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#logo")
-    .header-menu
+  div(class="d-flex justify-content-between w-100")
+    a.header-link(href="#" class="text-reset text-decoration-none text-white mr-4 mr-xl-0")
+      svg.header-icon-hexlet
+        use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#logo")
+    ul.header-menu(class="nav" id="myTab" role="tablist")
       li.nav-item(role="presentation")
         a.header-link(href="#contacts" class="text-reset text-decoration-none nav-link active" id="contacts-tab" data-toggle="tab" role="tab" aria-controls="contacts" aria-selected="true")
           svg.header-icon-small
