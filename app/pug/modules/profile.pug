@@ -1,4 +1,17 @@
-//- profile.pug
-.container
-  .row
-    .col
+.profile(class="px-4 pt-5 tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab")
+  h1.h2(class=['pb-3']) Профиль
+  form
+    .form-group(class="border-bottom border-gray-base mb-2")
+      label.sr-only(for="search") Поиск по сообщениям
+      input.form-control(type="text", placeholder="Поиск по сообщениям" class="py-3 border-0 shadow-none") 
+  .profile-name(class="py-3 mb-3")
+    img.avatar(src="images/dest/avatar_1.jpg")
+    h2(class="text-bold") Кодовёнок Хекслетович
+    p(class="text-small") Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+  .profile-social(class="border-gray-base text-reset my-2 mx-1")
+    .profile-social-title
+      p.chat-last-message(class="text-small") Страна
+      svg.header-icon-small
+        use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#globe")
+    h2.chat-name(class="text-bold") Москва, Россия
+    
