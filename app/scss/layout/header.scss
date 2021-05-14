@@ -4,7 +4,7 @@
 
 @include media-breakpoint-up(lg) {
   .header-main {
-    border-radius: 16px 0px 0px 0px;
+    border-radius: 16px 0 0 0;
   }
 }
 
@@ -19,26 +19,13 @@
   height: auto;
 }
 
-.header-icon-small {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: $white;
-  margin-right: 0.5rem;
-}
-
-.header-icon-hexlet {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: $white;
-}
-
 .header-link {
-  color: $white;
   display: flex;
   align-items: center;
+  color: $white;
 }
 
 .nav-link {
+  margin: 0.5rem 2rem 0.5rem 0;
   padding: 0;
-  margin: .5rem 2rem .5rem 0;
 }
