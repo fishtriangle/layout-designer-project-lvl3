@@ -1,4 +1,31 @@
-.profile(class="px-4 pt-5 tab-pane fade bg-white" id="profile" role="tabpanel" aria-labelledby="profile-tab")
+-
+  let contactData = {
+    "country": [{
+      descr: "Страна",
+      content: "Москва, Россия",
+      icon: "images/dest/sprite/stack/svg/sprite.stack.svg#globe",
+    }],
+
+    "phone": [{
+      descr: "Телефон",
+      content: "+7 (499) 123-45-67",
+      icon: "images/dest/sprite/stack/svg/sprite.stack.svg#phone",
+    }],
+
+    "Email": [{
+      descr: "Email",
+      content: "nikita.m@hexlet.io",
+      icon: "images/dest/sprite/stack/svg/sprite.stack.svg#message",
+    }],
+
+    "Twitter": [{
+      descr: "Twitter",
+      content: "@n__mikhaylov",
+      icon: "images/dest/sprite/stack/svg/sprite.stack.svg#people",
+    }],
+  }
+
+.profile(class="px-4 pt-5 tab-pane fade bg-white scroll-control-profile" id="profile" role="tabpanel" aria-labelledby="profile-tab")
   h1.h2(class=['pb-3']) Профиль
   form
     .form-group(class="border-bottom border-gray-base mb-2")
@@ -10,12 +37,23 @@
       h2(class="text-bold" class="mb-3 text-center") Кодовёнок Хекслетович
       p(class="text-small" class="mb-3 text-center text-secondary") Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
   .profile-social(class="my-4 d-flex flex-column align-items-center")
-    .country(class="border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between")
-      .profile-social-title
-        p(class="text-small text-secondary m-0") Страна
-        h2(class="text-small text-bold m-0") Москва, Россия
-      div(class="d-flex align-items-center")
-        svg.icon-small
-            use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#globe")
+    each contactInf, index in contactData
+      each val in contactInf
+        if index == "Twitter"
+          div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between")
+            div
+              p(class="text-small text-secondary m-0")= val.descr
+              h2(class="text-small text-bold m-0")= val.content
+            div(class="d-flex align-items-center text-secondary")
+              svg.icon-small
+                  use(xlink:href= val.icon)
+        else
+          div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between border-bottom border-gray-base")
+            div
+              p(class="text-small text-secondary m-0")= val.descr
+              h2(class="text-small text-bold m-0")= val.content
+            div(class="d-flex align-items-center text-secondary")
+              svg.icon-small
+                  use(xlink:href= val.icon)
 
       
