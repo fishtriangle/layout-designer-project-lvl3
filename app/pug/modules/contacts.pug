@@ -49,10 +49,7 @@
 
 .contacts(class="px-4 pt-5 tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
   h1.h2(class=['pb-3']) Контакты
-  form
-    .form-group(class="border-bottom border-gray-base mb-2")
-      label.sr-only(for="search") Поиск контакта
-      input.form-control(type="text", placeholder="Поиск по контактам" class="py-3 contact-form-text border-0 shadow-none") 
+  include findformcontacts.pug
   ul.contact-list(class="list-group")
     each val, index in contacts
       p.contact-abc(class="mb-2 text-muted")= index

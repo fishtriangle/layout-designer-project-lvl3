@@ -22,10 +22,7 @@
 
 .chats(class="px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
   h1.h2(class=['pb-3']) Чаты
-  form
-    .form-group(class="border-bottom border-gray-base mb-2")
-      label.sr-only(for="search") Поиск по сообщениям
-      input.form-control(type="text", placeholder="Поиск по сообщениям" class="py-3 chat-form-text border-0 shadow-none") 
+  include findformchatlist.pug
   ul.chat-list(class="list-group")
     each val, index in chats
       each person in val

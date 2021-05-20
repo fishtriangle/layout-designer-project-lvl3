@@ -27,10 +27,7 @@
 
 .profile(class="px-4 pt-5 tab-pane fade bg-white scroll-control-profile" id="profile" role="tabpanel" aria-labelledby="profile-tab")
   h1.h2(class=['pb-3']) Профиль
-  form
-    .form-group(class="border-bottom border-gray-base mb-2")
-      label.sr-only(for="search") Поиск по сообщениям
-      input.form-control(type="text", placeholder="Поиск по сообщениям" class="py-3 border-0 shadow-none") 
+  include findformprofile.pug
   div(class="my-4 d-flex flex-column align-items-center")
     .profile-name(class="py-3 mb-3 d-flex flex-column align-items-center w-75")
       img.avatar(src="images/dest/avatar_1.jpg" class="mb-3 avatar-big")
