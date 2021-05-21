@@ -20,9 +20,14 @@
     }],
   }
 
+  findForm = {
+    formName: "Чаты", 
+    formText: "Поиск по контактам"
+  }
+
 .chats(class="px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
   h1.h2(class=['pb-3']) Чаты
-  include findformchatlist.pug
+  include findform.pug
   ul.chat-list(class="list-group")
     each val, index in chats
       each person in val

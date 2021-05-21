@@ -1,4 +1,4 @@
 form(class="mb-5")
   .form-group(class="border-bottom border-gray-base")
-    label.sr-only(for="search")= findForm[0]
-    input.form-control(type="text", placeholder= findForm[1] class="p-4 border-0 shadow-none bg-white")
+    label.sr-only(for="search")= findForm.formName
+    input.form-control(type="text", placeholder= findForm.formText class="p-4 border-0 shadow-none bg-white")

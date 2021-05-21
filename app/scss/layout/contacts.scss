@@ -9,10 +9,16 @@
 
 .contact-list {
   display: flex;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 290px);
   //-   overflow: auto;
 
   @include hide-scrollbar();
+}
+
+@include media-breakpoint-up(lg) {
+  .contact-list {
+    height: calc(100vh - 340px);
+  }
 }
 
 .contact-status {
