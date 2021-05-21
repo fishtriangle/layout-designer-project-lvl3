@@ -24,3 +24,11 @@ $container-max-widths: (
 $enable-shadows: true;
 
 $grid-gutter-width: 0;
+
+$sides: (
+  "all",
+  "top",
+  "bottom",
+  "left",
+  "rigth"
+);
