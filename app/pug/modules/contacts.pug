@@ -47,9 +47,13 @@
     }],
   }
 
+  findForm = {
+    "Контакты", "Поиск по контактам"
+  }
+
 .contacts(class="px-4 pt-5 tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
   h1.h2(class=['pb-3']) Контакты
-  include findformcontacts.pug
+  include findform.pug
   ul.contact-list(class="list-group")
     each val, index in contacts
       p.contact-abc(class="mb-2 text-muted")= index
