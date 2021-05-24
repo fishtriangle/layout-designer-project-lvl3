@@ -9,10 +9,16 @@
 
 .chat-list {
   display: flex;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 290px);
   //-   overflow: auto;
 
   @include hide-scrollbar();
+}
+
+@include media-breakpoint-up(lg) {
+  .chat-list {
+    height: calc(100vh - 262px);
+  }
 }
 
 .chat-last-time {
@@ -57,8 +63,8 @@
 
 .chat-body {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   padding: 1.5rem;
   overflow-x: hidden;
 }
