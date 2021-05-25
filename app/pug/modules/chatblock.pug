@@ -1,0 +1,60 @@
+//- chatblock.pug
+-
+  let chatSourse = {
+    "1": {
+      name: "Вениамин Редакторович",
+      status: "8 минут назад",
+      avatar: "images/dest/avatar_4.jpg",
+      message: "Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?",
+    },
+
+    "2": {
+      name: "none",
+      status: "5 минут назад",
+      avatar: "images/dest/avatar_1.jpg",
+      message: "Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень",
+    },
+
+    "3": {
+      name: "Вениамин Редакторович",
+      status: "5 минут назад",
+      avatar: "images/dest/avatar_4.jpg",
+      message: "Лады",
+    },
+
+    "4": {
+      name: "none",
+      status: "3 минуты назад",
+      avatar: "images/dest/avatar_1.jpg",
+      message: "А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие",
+    },
+
+    "5": {
+      name: "Вениамин Редакторович",
+      status: "Только что",
+      avatar: "images/dest/avatar_4.jpg",
+      message: "о_О",
+    },
+  }
+
+
+.chatblock-title(class="border-bottom shadow-none text-reset text-decoration-none mx-1")
+  img.avatar(src="images/dest/avatar_4.jpg")
+  .chatblock-title-body
+    h2.contact-name(class="text-bold") Вениамин Редакторович
+    p.contact-status(class="text-small") Онлайн
+.chatblock-body(class="m-5")
+  each writer, index in chatSourse
+    if writer.name == "none"
+      .chatblock-message(class="mb-3 d-flex flex-row align-items-end justify-content-end")
+        img.avatar(src= writer.avatar class="mr-3")
+        .chatblock-message-body(class="bg-primary shadow-sm radius p-4")
+          p(class="pb-2 border-bottom border-light text-light")= writer.message
+          p(class="pt-1 text-small text-gray-base")= writer.status
+    else
+      .chatblock-message(class="mb-3 d-flex flex-row align-items-end")
+        img.avatar(src= writer.avatar class="mr-3")
+        .chatblock-message-body(class="bg-gray shadow-sm radius p-4")
+          p(class="pb-2 text-dark text-bold")= writer.name
+          p(class="pb-2 text-secondary")= writer.message
+          p(class="pt-1 text-small text-secondary")= writer.status
