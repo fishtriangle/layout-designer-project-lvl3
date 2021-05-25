@@ -15,5 +15,19 @@
         }
       }
     }
+
+    @each $value in $sides {
+      @if ($value == "all") {
+        .border#{$infix}-light {
+          border: 1px solid #fbfbfb !important;
+        }
+      }
+
+      @else {
+        .border#{$infix}-#{$value}-light {
+          border-#{$value}: 1px solid #fbfbfb !important;
+        }
+      }
+    }
   }
 }

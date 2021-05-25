@@ -18,16 +18,16 @@ html(lang='ru')
   
   body
     main(class="m-0 p-lg-4 h-100")
-      .row
-        .block-left(class=['col-sm-12 col-lg-4 p-0 bg-white'])
+      .row(class="radius-left-top-lg")
+        .block-left(class=['col-sm-12 col-lg-4 p-0 bg-white radius-left-top-lg'])
           //- Подключение шапки сайта
           include modules/header.pug
-          .tab-content(id="myTabContent")
+          .tab-content(id="myTabContent" class="radius-left-top-lg")
             include modules/contacts.pug
             include modules/chatlist.pug
             include modules/profile.pug
             //- include modules/chatmobile.pug
-        .block-right(class=['col-lg-8 border-left border-gray-base bg-white'])
+        .block-right(class=['col-lg-8 border-left border-gray-base bg-white radius-right-top-lg'])
           include modules/chatblock.pug
           //- include modules/chatdesktop.pug
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")

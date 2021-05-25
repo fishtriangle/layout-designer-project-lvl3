@@ -16,6 +16,10 @@
       border-bottom-right-radius: 1rem;
     }
 
+    .radius-right-top#{$infix} {
+      border-top-right-radius: 1rem;
+    }
+
     .radius#{$infix} {
       border-radius: 1rem;
     }
