@@ -58,3 +58,8 @@
           p(class="mb-1 text-dark text-bold")= writer.name
           p(class="pb-2 m-0 text-secondary border-bottom-light")= writer.message
           p(class="pt-1 m-0 text-small text-secondary")= writer.status
+.chatblock-send 
+  form(class="mb-5")
+    .form-group(class="border-top border-gray-base")
+      label.sr-only(for="newMessage") 
+      input.form-control(type="text", placeholder= findForm.formText class="p-4 border-0 shadow-none bg-white")
