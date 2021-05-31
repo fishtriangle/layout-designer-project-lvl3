@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 10px;
   overflow: hidden;
   background-color: $white;
 }
@@ -24,4 +23,11 @@
 
 .chatblock-message-body {
   max-width: 558px;
+}
+
+.chatblock-send {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  width: 100%;
 }
