@@ -18,15 +18,15 @@ html(lang='ru')
   
   body
     main(class="m-0 p-lg-4 h-100")
-      .row(class="radius-left-top-lg")
-        .block-left(class=['col-sm-12 col-lg-4 p-0 bg-white radius-left-top-lg'])
+      .row(class="radius-left-top-lg h-100")
+        .block-left(class=['col-sm-12 col-lg-4 p-0 bg-white radius-left-top-lg h-100'])
           //- Подключение шапки сайта
           include modules/header.pug
           .tab-content(id="myTabContent" class="radius-left-top-lg")
             include modules/contacts.pug
             include modules/chatlist.pug
             include modules/profile.pug
-            //- include modules/chatmobile.pug
+            include modules/chatblock-body.pug
         .block-right(class=['col-lg-8 border-left border-gray-base bg-white radius-right-top-lg'])
           include modules/chatblock.pug
           //- include modules/chatdesktop.pug
