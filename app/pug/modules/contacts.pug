@@ -46,26 +46,26 @@ if hexletSwitch == "chat.html"
     include findform.pug
     ul.contact-list(class="list-group")
       each val, index in contacts
-        p.contact-abc(class="mb-2 text-muted")= index
+        p.contact-abc(class="mb-2 text-muted mt-5")= index
         each person in val
           li
             a.contact-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none my-2")
               img.avatar(src= person.avatar)
               .contact-body
-                h2.contact-name(class="text-bold")= person.name
+                h2.contact-name(class="text-bold mb-0")= person.name
                 p.contact-status(class="text-small")= person.status
 if hexletSwitch == "index.html"
   .contacts(class="px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul.contact-list(class="list-group")
       each val, index in contacts
-        p.contact-abc(class="mb-2 text-muted")= index
+        p.contact-abc(class="mb-2 text-muted mt-5")= index
         each person in val
           li
             a.contact-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none my-2")
               img.avatar(src= person.avatar)
               .contact-body
-                h2.contact-name(class="text-bold")= person.name
+                h2.contact-name(class="text-bold mb-0")= person.name
                 p.contact-status(class="text-small")= person.status
           
 

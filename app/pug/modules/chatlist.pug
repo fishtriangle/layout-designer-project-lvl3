@@ -22,33 +22,33 @@
 
   findForm = {
     formName: "Чаты", 
-    formText: "Поиск по контактам"
+    formText: "Поиск по сообщениям"
   }
 
 if hexletSwitch == "chat.html"
   .chats(class="px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
     include findform.pug
-    ul.chat-list(class="list-group")
+    ul.chat-list(class="list-group mt-5")
       each val, index in chats
         each person in val
-          a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary reset text-decoration-none my-2")
+          a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary reset text-decoration-none mb-3")
             img.avatar(src= person.avatar)
             .chat-body
               .chat-title
-                h2.chat-name(class="text-bold")= person.name
+                h2.chat-name(class="text-bold mb-0")= person.name
                 p.chat-last-time(class="text-small")= index
               p.chat-last-message(class="text-small")= person.lastMessage
 if hexletSwitch == "index.html"
   .chats(class="px-4 pt-5 tab-pane fade show active" id="chats" role="tabpanel" aria-labelledby="chats-tab")
     include findform.pug
-    ul.chat-list(class="list-group")
+    ul.chat-list(class="list-group mt-5")
       each val, index in chats
         each person in val
-          a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none my-2")
+          a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none mb-3")
             img.avatar(src= person.avatar)
             .chat-body
               .chat-title
-                h2.chat-name(class="text-bold")= person.name
+                h2.chat-name(class="text-bold mb-0")= person.name
                 p.chat-last-time(class="text-small")= index
               p.chat-last-message(class="text-small")= person.lastMessage
 
