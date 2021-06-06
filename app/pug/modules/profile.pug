@@ -27,24 +27,24 @@
 
   findForm = {
     formName: "Профиль", 
-    formText: "Поиск по контактам"
+    formText: "Поиск по сообщениям"
   }
 
 .profile(class="px-4 pt-5 tab-pane fade bg-white scroll-control-profile" id="profile" role="tabpanel" aria-labelledby="profile-tab")
   include findform.pug
-  div(class="my-4 d-flex flex-column align-items-center")
-    .profile-name(class="py-3 mb-3 d-flex flex-column align-items-center w-75")
-      img.avatar(src="images/dest/avatar_1.jpg" class="mb-3 avatar-big")
+  div(class="mt-5 mb-5 d-flex flex-column align-items-center")
+    .profile-name(class="pt-3 mt-1 d-flex flex-column align-items-center w-75")
+      img.avatar(src="images/dest/avatar_1.jpg" class="my-3 avatar-big")
       h2(class="text-bold" class="mb-3 text-center") Кодовёнок Хекслетович
-      p(class="text-small" class="mb-3 text-center text-secondary") Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
-  .profile-social(class="my-4 d-flex flex-column align-items-center")
+      p(class="text-small" class="pb-1 mb-5 text-center text-secondary") Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+  .profile-social(class="my-2 pt-1 d-flex flex-column align-items-center")
     each contactInf, index in contactData
       each val in contactInf
         if index == "Twitter"
           div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between")
             div
               p(class="text-small text-secondary m-0")= val.descr
-              h2(class="text-small text-bold m-0")= val.content
+              p(class="text-small m-0")= val.content
             div(class="d-flex align-items-center text-secondary")
               svg.icon-small
                   use(xlink:href= val.icon)
@@ -52,7 +52,7 @@
           div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between border-bottom border-gray-base")
             div
               p(class="text-small text-secondary m-0")= val.descr
-              h2(class="text-small text-bold m-0")= val.content
+              p(class="text-small m-0")= val.content
             div(class="d-flex align-items-center text-secondary")
               svg.icon-small
                   use(xlink:href= val.icon)

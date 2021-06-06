@@ -34,6 +34,12 @@
 .chatblock-send {
   position: absolute;
   right: 0;
-  bottom: 8px;
+  bottom: 72px;
   width: 100%;
+}
+
+@include media-breakpoint-up(lg) {
+  .chatblock-send {
+    bottom: 8px;
+  }
 }
