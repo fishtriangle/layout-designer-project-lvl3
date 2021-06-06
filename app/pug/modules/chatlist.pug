@@ -25,17 +25,31 @@
     formText: "Поиск по контактам"
   }
 
-.chats(class="px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
-  include findform.pug
-  ul.chat-list(class="list-group")
-    each val, index in chats
-      each person in val
-        a.chat-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2")
-          img.avatar(src= person.avatar)
-          .chat-body
-            .chat-title
-              h2.chat-name(class="text-bold")= person.name
-              p.chat-last-time(class="text-small")= index
-            p.chat-last-message(class="text-small")= person.lastMessage
+if hexletSwitch == "chat.html"
+  .chats(class="px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
+    include findform.pug
+    ul.chat-list(class="list-group")
+      each val, index in chats
+        each person in val
+          a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary reset text-decoration-none my-2")
+            img.avatar(src= person.avatar)
+            .chat-body
+              .chat-title
+                h2.chat-name(class="text-bold")= person.name
+                p.chat-last-time(class="text-small")= index
+              p.chat-last-message(class="text-small")= person.lastMessage
+if hexletSwitch == "index.html"
+  .chats(class="px-4 pt-5 tab-pane fade show active" id="chats" role="tabpanel" aria-labelledby="chats-tab")
+    include findform.pug
+    ul.chat-list(class="list-group")
+      each val, index in chats
+        each person in val
+          a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none my-2")
+            img.avatar(src= person.avatar)
+            .chat-body
+              .chat-title
+                h2.chat-name(class="text-bold")= person.name
+                p.chat-last-time(class="text-small")= index
+              p.chat-last-message(class="text-small")= person.lastMessage
 
 
