@@ -9,7 +9,7 @@
 
 .contact-list {
   display: flex;
-  height: calc(100vh - 290px);
+  height: calc(100vh - 235px);
 
   @include hide-scrollbar();
 }

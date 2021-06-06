@@ -26,12 +26,11 @@
   }
 
 .chats(class="px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
-  h1.h2(class=['pb-3']) Чаты
   include findform.pug
   ul.chat-list(class="list-group")
     each val, index in chats
       each person in val
-        a.chat-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2 mx-1")
+        a.chat-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2")
           img.avatar(src= person.avatar)
           .chat-body
             .chat-title

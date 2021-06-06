@@ -42,14 +42,13 @@
   }
 
 .contacts(class="px-4 pt-5 tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
-  h1.h2(class=['pb-3']) Контакты
   include findform.pug
   ul.contact-list(class="list-group")
     each val, index in contacts
       p.contact-abc(class="mb-2 text-muted")= index
       each person in val
         li
-          a.contact-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2 mx-1")
+          a.contact-card(href="#" class="border-gray-base shadow-sm text-reset text-decoration-none my-2")
             img.avatar(src= person.avatar)
             .contact-body
               h2.contact-name(class="text-bold")= person.name
