@@ -16,7 +16,7 @@
 
 @include media-breakpoint-up(lg) {
   .contact-list {
-    height: calc(100vh - 320px);
+    height: calc(100vh - 300px);
   }
 }
 
@@ -41,6 +41,8 @@
 
   align-items: center;
   height: 90px;
+  margin-right: 2px;
+  margin-left: 2px;
   padding: 20px 24px 20px 16px;
 
   &:hover {
