@@ -49,7 +49,7 @@ if hexletSwitch == "chat.html"
         p.contact-abc(class="mb-2 text-muted mt-5")= index
         each person in val
           li
-            a.contact-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none my-2")
+            a.contact-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
               .contact-body
                 h2.contact-name(class="text-bold mb-0")= person.name
@@ -62,7 +62,7 @@ if hexletSwitch == "index.html"
         p.contact-abc(class="mb-2 text-muted mt-5")= index
         each person in val
           li
-            a.contact-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none my-2")
+            a.contact-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
               .contact-body
                 h2.contact-name(class="text-bold mb-0")= person.name
