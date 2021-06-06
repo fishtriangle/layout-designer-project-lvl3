@@ -1,5 +1,5 @@
 -
-  let contacts = {
+  contacts = {
     "A": [{
       name: "Алексей Примадонин",
       status: "Онлайн",
@@ -42,7 +42,7 @@
   }
 
 if hexletSwitch == "chat.html"
-  .contacts(class="px-4 pt-5 tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
+  .contacts(class="px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul.contact-list(class="list-group")
       each val, index in contacts

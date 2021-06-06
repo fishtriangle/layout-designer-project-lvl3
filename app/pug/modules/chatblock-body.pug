@@ -38,7 +38,12 @@
     },
   }
 
-.chatblock-body(class="p-5 tab-pane fade show" id="current-chat" role="tabpanel" aria-labelledby="current-chat-tab")
+.chatblock-title(class="border-bottom shadow-none text-reset text-decoration-none radius-right-top-lg pl-3")
+    img.avatar(src="images/dest/avatar_4.jpg")
+    .chatblock-title-body
+      h2.contact-name(class="text-bold m-0") Вениамин Редакторович
+      p.contact-status(class="text-small") Онлайн
+.chatblock-body(class="p-5")
   each writer, index in chatSourse
     if writer.name == "none"
       .chatblock-message(class="mb-3 d-flex flex-row align-items-end justify-content-end")

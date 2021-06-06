@@ -16,9 +16,15 @@
 }
 
 .chatblock-body {
-  height: 90vh;
+  height: 85vh;
 
   @include hide-scrollbar();
+}
+
+@include media-breakpoint-up(lg) {
+  .chatblock-body {
+    height: 80vh;
+  }
 }
 
 .chatblock-message-body {

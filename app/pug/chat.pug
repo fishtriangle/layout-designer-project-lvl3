@@ -2,6 +2,7 @@
 -
   let findForm
   let hexletSwitch;
+  let contacts;
   hexletSwitch = "index.html";
 
 doctype html
@@ -26,7 +27,7 @@ html(lang='ru')
             include modules/contacts.pug
             include modules/chatlist.pug
             include modules/profile.pug
-            include modules/chatblock-body.pug
+            include modules/chatblock-switch.pug
         .block-right(class=['col-lg-8 border-left border-gray-base bg-white radius-right-lg h-100'])
           include modules/chatblock.pug
           //- include modules/chatdesktop.pug
