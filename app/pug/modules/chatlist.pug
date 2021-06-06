@@ -33,7 +33,7 @@ if hexletSwitch == "chat.html"
         each person in val
           a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary reset text-decoration-none mb-3")
             img.avatar(src= person.avatar)
-            .chat-body
+            .chat-body(class="d-flex flex-grow-1 flex-shrink-1 flex-column")
               .chat-title
                 h2.chat-name(class="text-bold mb-0")= person.name
                 p.chat-last-time(class="text-small")= index
@@ -46,7 +46,7 @@ if hexletSwitch == "index.html"
         each person in val
           a.chat-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none mb-3")
             img.avatar(src= person.avatar)
-            .chat-body
+            .chat-body(class="d-flex flex-grow-1 flex-shrink-1 flex-column")
               .chat-title
                 h2.chat-name(class="text-bold mb-0")= person.name
                 p.chat-last-time(class="text-small")= index
