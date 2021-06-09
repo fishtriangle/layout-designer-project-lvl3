@@ -1,6 +1,9 @@
 //- index.pug
+extends modules/layout.pug
 -
   let hexletSwitch;
   hexletSwitch = "chat.html";
 
-include modules/layout.pug
+block block-right
+  .block-right(class=['col-lg-8 border-left border-gray-base bg-gray-base h-100 radius-right-lg'])
+    include modules/hello.pug

@@ -25,12 +25,14 @@ html(lang='ru')
             include contacts.pug
             include chatlist.pug
             include profile.pug
-            if hexletSwitch == "index.html"
+            block chatblock-switch
+            //if hexletSwitch == "index.html"
                 include chatblock-switch.pug
-        if hexletSwitch == "index.html"
+        block block-right
+        //if hexletSwitch == "index.html"
             .block-right(class=['col-lg-8 border-left border-gray-base bg-white radius-right-lg h-100'])
                 include chatblock.pug
-        if hexletSwitch == "chat.html"
+        //if hexletSwitch == "chat.html"
             .block-right(class=['col-lg-8 border-left border-gray-base bg-gray-base h-100 radius-right-lg'])
                 include hello.pug
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
