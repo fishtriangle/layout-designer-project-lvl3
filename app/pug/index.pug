@@ -1,8 +1,10 @@
 //- index.pug
 extends modules/layout.pug
--
-  let hexletSwitch;
-  hexletSwitch = "chat.html";
+
+block variables
+  -
+    let hexletSwitch;
+    hexletSwitch = "chat.html";
 
 block block-right
   .block-right(class=['col-lg-8 border-left border-gray-base bg-gray-base h-100 radius-right-lg'])
