@@ -19,7 +19,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 
 // Подключаем gulp-imagemin для работы с изображениями
-const imagemin = require('gulp-imagemin');
+//const imagemin = require('gulp-imagemin');
 
 // Подключаем модуль gulp-newer
 const newer = require('gulp-newer');
@@ -53,7 +53,7 @@ let config = {
 // Вывод в браузер
 const browsersync = () => {
 	browserSync.init({
-		server: { baseDir: 'app/' },
+		server: { baseDir: 'build/' },
 		watch: true,
 		notify: false,
 		online: false
@@ -64,11 +64,11 @@ const browsersync = () => {
 const buildHTML = () => {
 	return src('app/pug/*.pug')
   .pipe(pug())
-  .pipe(dest('app/'))
+  .pipe(dest('build/'))
 }
 
 const deleteHTML = () => {
-  return del('app/**/*.html', { force: true })
+  return del('build/**/*.html', { force: true })
 }
 
 const scripts = () => {
@@ -78,10 +78,9 @@ const scripts = () => {
 		'node_modules/bootstrap/dist/js/bootstrap.min.js',
 		//'app/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 		])
-		//.pipe(babel())
 		.pipe(concat('app.min.js')) // Конкатенируем в один файл
 		.pipe(uglify()) // Сжимаем JavaScript
-		.pipe(dest('app/js/')) // Выгружаем готовый файл в папку назначения
+		.pipe(dest('build/js/')) // Выгружаем готовый файл в папку назначения
 		.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }
 
@@ -90,7 +89,7 @@ const scripts = () => {
 const makesprite = () => {
 	return src('app/images/source/icons/*.svg')
   .pipe(svgSprite(config))
-  .pipe(dest('app/images/dest/sprite'))
+  .pipe(dest('build/images/dest/sprite'))
 }
 
 
@@ -102,7 +101,7 @@ const scss = () => {
 	.pipe(concat('styles.css')) // Конкатенируем в файл
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
 	.pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
-	.pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
+	.pipe(dest('build/css/')) // Выгрузим результат в папку "app/css/"
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
@@ -110,29 +109,29 @@ const scss = () => {
 // Преобразование изображений
 const images = () => {
 	return src('app/images/source/**/*.jpg') // Берём все изображения из папки источника
-	.pipe(newer('app/images/dest')) // Проверяем, было ли изменено (сжато) изображение ранее
-	.pipe(imagemin()) // Сжимаем и оптимизируем изображеня
-	.pipe(dest('app/images/dest')) // Выгружаем оптимизированные изображения в папку назначения
+	.pipe(newer('build/images/dest')) // Проверяем, было ли изменено (сжато) изображение ранее
+//	.pipe(imagemin()) // Сжимаем и оптимизируем изображеня
+	.pipe(dest('build/images/dest')) // Выгружаем оптимизированные изображения в папку назначения
 }
 
 const cleanimg = () => {
-	return del('app/images/dest/**/*', { force: true }) // Удаляем всё содержимое папки "app/images/dest/"
+	return del('build/images/dest/**/*', { force: true }) // Удаляем всё содержимое папки "app/images/dest/"
 }
 
 
 // сборка проекта
-const buildcopy = () => {
-	return src([ // Выбираем нужные файлы
-		'app/css/styles.css',
-		'app/js/app.min.js',
-		'app/images/dest/**/*',
-		'app/*.html',
-		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
-	.pipe(dest('build')) // Выгружаем в папку с финальной сборкой
-}
+//const buildcopy = () => {
+//	return src([ // Выбираем нужные файлы
+//		'app/css/styles.css',
+//		'app/js/app.min.js',
+//		'app/images/dest/**/*',
+//		'app/*.html',
+//		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
+//	.pipe(dest('build')) // Выгружаем в папку с финальной сборкой
+//}
 
 const cleanbuild = () => {
-	return del('build/**/*', { force: true }) // Удаляем всё содержимое папки "dist/"
+	return del('build/**/*', { force: true }) // Удаляем всё содержимое папки "build/"
 }
 
 // Мониторинг изменений
@@ -143,9 +142,9 @@ const startwatch = () => {
 	// Мониторим папку-источник изображений и выполняем images(), если есть изменения
 	watch('app/images/source/**/*.jpg', images);
 
-  watch('app/images/source/**/*.svg', makesprite);
+    watch('app/images/source/**/*.svg', makesprite);
 
-  watch('app/pug/**/*.pug', buildHTML);
+    watch('app/pug/**/*.pug', buildHTML);
 	watch('app/pug/*.pug', buildHTML);
 
 	watch('app/js/*.js', scripts);
@@ -184,7 +183,7 @@ exports.lintscss = lintScssTask;
 exports.startwatch = startwatch;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
-exports.build = series(cleanbuild, scripts, buildHTML, scss, images, makesprite, buildcopy);
+// exports.build = series(cleanbuild, scripts, buildHTML, scss, images, makesprite, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = series(scripts, parallel(buildHTML, scss, images, makesprite, browsersync, startwatch));
+exports.default = series(cleanbuild, scripts, parallel(buildHTML, scss, images, makesprite, browsersync, startwatch));
