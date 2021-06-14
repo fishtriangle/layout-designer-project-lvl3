@@ -19,24 +19,15 @@ html(lang='ru')
   
   body
     main(class="m-0 p-lg-4 h-100")
-      .row(class="radius-left-top-lg h-100")
-        .block-left(class=['col-sm-12 col-lg-4 p-0 bg-white radius-left-lg h-100'])
-          //- Подключение шапки сайта
+      div(class="row radius-left-top-lg h-100")
+        div(class=['block-left col-sm-12 col-lg-4 p-0 bg-white radius-left-lg h-100'])
           include header.pug
-          .tab-content(id="myTabContent" class="radius-left-lg")
+          div(id="myTabContent" class="tab-content radius-left-lg")
             include contacts.pug
             include chatlist.pug
             include profile.pug
             block chatblock-switch
-            //if hexletSwitch == "index.html"
-                include chatblock-switch.pug
         block block-right
-        //if hexletSwitch == "index.html"
-            .block-right(class=['col-lg-8 border-left border-gray-base bg-white radius-right-lg h-100'])
-                include chatblock.pug
-        //if hexletSwitch == "chat.html"
-            .block-right(class=['col-lg-8 border-left border-gray-base bg-gray-base h-100 radius-right-lg'])
-                include hello.pug
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")

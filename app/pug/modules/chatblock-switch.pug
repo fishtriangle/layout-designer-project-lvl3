@@ -4,19 +4,19 @@
     formText: "Поиск по контактам"
   }
 
-.chatblock(class="tab-pane fade show" id="current-chat" role="tabpanel" aria-labelledby="current-chat-tab")
+div(class="chatblock tab-pane fade show" id="current-chat" role="tabpanel" aria-labelledby="current-chat-tab")
   div(class="d-md-none")
     include chatblock.pug
   div(class="d-sm-none d-md-block")
-    .contacts(class="px-4 pt-5")
+    div(class="contacts px-4 pt-5")
       include findform.pug
-      ul.contact-list(class="list-group")
+      ul(class="contact-list list-group")
         each val, index in contacts
-          p.contact-abc(class="mb-2 text-muted mt-5")= index
+          p(class="contact-abc mb-2 text-muted mt-5")= index
           each person in val
             li
-              a.contact-card(href="#" class="border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
+              a(href="#" class="contact-card border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
                 img.avatar(src= person.avatar)
                 .contact-body
-                  h2.contact-name(class="text-bold mb-0")= person.name
-                  p.contact-status(class="text-small")= person.status
+                  h2(class="contact-name text-bold mb-0")= person.name
+                  p(class="contact-statustext-small")= person.status

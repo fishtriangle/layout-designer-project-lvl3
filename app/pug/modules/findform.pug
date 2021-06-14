@@ -1,5 +1,5 @@
-h1.h2(class=['pb-3 text-dark'])= findForm.formName
+h1(class="h2 pb-3 text-dark")= findForm.formName
 form(class="mb-0")
-  .form-group(class="border-bottom border-gray-base mb-0")
+  div(class="form-group border-bottom border-gray-base mb-0")
     label.sr-only(for="search")= findForm.formName
-    input.form-control(type="text", placeholder= findForm.formText class="p-4 border-0 shadow-none bg-white")
+    input(type="text", placeholder= findForm.formText class="form-control p-4 border-0 shadow-none bg-white")

@@ -38,23 +38,23 @@
     },
   }
 
-.chatblock-title(class="border-bottom shadow-none text-reset text-decoration-none radius-right-top-lg pl-3")
+div(class="chatblock-title border-bottom shadow-none text-reset text-decoration-none radius-right-top-lg pl-3")
     img.avatar(src="images/dest/avatar_4.jpg")
-    .chatblock-title-body(class="d-flex flex-grow-1 flex-shrink-1 flex-column")
-      h2.contact-name(class="text-bold m-0") Вениамин Редакторович
-      p.contact-status(class="text-small") Онлайн
-.chatblock-body(class="p-5")
+    div(class="chatblock-title-body d-flex flex-grow-1 flex-shrink-1 flex-column")
+      h2(class="contact-name text-bold m-0") Вениамин Редакторович
+      p(class="contact-status text-small") Онлайн
+div(class="chatblock-body p-5")
   each writer, index in chatSourse
     if writer.name == "none"
-      .chatblock-message(class="mb-3 d-flex flex-row align-items-end justify-content-end")
-        img.avatar(src= writer.avatar class="mr-3 d-none d-lg-block")
-        .chatblock-message-body(class="bg-primary shadow-sm radius p-4")
+      div(class="chatblock-message mb-3 d-flex flex-row align-items-end justify-content-end")
+        img(src= writer.avatar class="avatar mr-3 d-none d-lg-block")
+        div(class="chatblock-message-body bg-primary shadow-sm radius p-4")
           p(class="pb-2 m-0 border-bottom text-light")= writer.message
           p(class="pt-1 m-0 text-small text-gray-base")= writer.status
     else
-      .chatblock-message(class="mb-3 d-flex flex-row align-items-end")
-        img.avatar(src= writer.avatar class="mr-3 d-none d-lg-block")
-        .chatblock-message-body(class="bg-light shadow-sm radius p-4")
+      div(class="chatblock-message mb-3 d-flex flex-row align-items-end")
+        img(src= writer.avatar class="avatar mr-3 d-none d-lg-block")
+        div(class="chatblock-message-body bg-light shadow-sm radius p-4")
           p(class="mb-1 text-dark text-bold")= writer.name
           p(class="pb-2 m-0 text-secondary border-bottom-light")= writer.message
           p(class="pt-1 m-0 text-small text-secondary")= writer.status
