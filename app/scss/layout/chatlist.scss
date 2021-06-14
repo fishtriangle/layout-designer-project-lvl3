@@ -10,7 +10,6 @@
 .chat-list {
   display: flex;
   height: calc(100vh - 290px);
-  //-   overflow: auto;
 
   @include hide-scrollbar();
 }

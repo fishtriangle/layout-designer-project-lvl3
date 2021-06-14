@@ -45,9 +45,9 @@ if hexletSwitch == "chat.html"
   div(class="contacts px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul(class="contact-list list-group")
-      each val, index in contacts
+      each letter, index in contacts
         p(class="contact-abc mb-2 text-muted mt-5")= index
-        each person in val
+        each person in letter
           li
             a(href="#" class="contact-card border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
@@ -58,9 +58,9 @@ if hexletSwitch == "index.html"
   div(class="contacts px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul(class="contact-list list-group")
-      each val, index in contacts
+      each letter, index in contacts
         p(class="contact-abc mb-2 text-muted mt-5")= index
-        each person in val
+        each person in letter
           li
             a(href="#" class="contact-card border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
