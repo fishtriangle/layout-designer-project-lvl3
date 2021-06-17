@@ -1,29 +1,29 @@
 //- header.pug
 
-header(class="header-main bg-primary text-white py-4 pl-3 pr-0 text-small radius-left-top-lg w-100")
+header(class="header-main d-flex  bg-primary text-white py-4 pl-3 pr-0 text-small radius-left-top-lg w-100")
   nav(class="d-flex justify-content-between w-100")
-    a(href= hexletSwitch class="header-link text-light text-decoration-none text-white mr-4 mr-xl-0")
+    a(href= hexletSwitch class="d-flex align-items-center text-white text-light text-decoration-none text-white mr-4 mr-xl-0")
       svg(class="icon-small-white mr-2")
         use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#logo")
-    ul(class="header-menu nav" id="myTab" role="tablist")
+    ul(class="d-flex flex-nowrap nav mx-3" id="myTab" role="tablist")
       if hexletSwitch == "index.html"
         li(role="presentation" class="nav-item d-sm-flex d-md-none align-items-center")
-          a(href="#current-chat" class="header-link text-light text-decoration-none nav-link" id="current-chat-tab" data-toggle="tab" role="tab" aria-controls="current-chat" aria-selected="false")
+          a(href="#current-chat" class="d-flex align-items-center text-white text-light text-decoration-none p-0 mx-3" id="current-chat-tab" data-toggle="tab" role="tab" aria-controls="current-chat" aria-selected="false")
             svg.icon-small(class="mr-2")
               use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#chat-left-text")
             span(class="d-none") Чат
       li(role="presentation" class="nav-item d-flex align-items-center")
-        a(href="#contacts" class="header-link text-light text-decoration-none nav-link" id="contacts-tab" data-toggle="tab" role="tab" aria-controls="contacts" aria-selected="true")
+        a(href="#contacts" class="d-flex align-items-center text-white text-light text-decoration-none p-0 mx-3" id="contacts-tab" data-toggle="tab" role="tab" aria-controls="contacts" aria-selected="true")
           svg(class="icon-small mr-2")
             use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#people")
           span(class="d-none d-xl-inline") Контакты
       li(role="presentation" class="nav-item d-flex align-items-center")
-        a(href="#chats" class="header-link text-light text-decoration-none nav-link" id="chats-tab" data-toggle="tab" role="tab" aria-controls="chats" aria-selected="false")
+        a(href="#chats" class="d-flex align-items-center text-white text-light text-decoration-none p-0 mx-3" id="chats-tab" data-toggle="tab" role="tab" aria-controls="chats" aria-selected="false")
           svg(class="icon-small mr-2")
             use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#chat")
           span(class="d-none d-xl-inline") Сообщения
       li(role="presentation" class="nav-item d-flex align-items-center")
-        a(href="#profile" class="header-link text-light text-decoration-none nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false")
+        a(href="#profile" class="d-flex align-items-center text-white text-light text-decoration-none p-0 mx-3" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false")
           svg(class="icon-small mr-2")
             use(xlink:href="images/dest/sprite/stack/svg/sprite.stack.svg#person")
           span(class="d-none d-xl-inline") Профиль
