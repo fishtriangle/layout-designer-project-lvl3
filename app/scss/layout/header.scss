@@ -1,6 +1,7 @@
 .header-main {
   position: absolute;
   bottom: 0;
+  display: flex;
   height: 4.5rem;
 }
 
@@ -10,6 +11,24 @@
   }
 }
 
+.header-menu {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.header-logo {
+  display: flex;
+  width: auto;
+  height: auto;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  color: $white;
+}
+
 .nav-link {
   margin: 0 2rem 0 0;
+  padding: 0;
 }
