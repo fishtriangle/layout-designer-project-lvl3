@@ -42,7 +42,7 @@
   }
 
 if hexletSwitch == "chat.html"
-  div(class="d-flex flex-column overflow-hidden bg-white px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
+  div(class="contacts overflow-hidden bg-white px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul(class="contact-list d-flex list-group")
       each letter, index in contacts
@@ -55,7 +55,7 @@ if hexletSwitch == "chat.html"
                 h2(class="contact-text overflow-hidden text-bold mb-0")= person.name
                 p(class="contact-text m-0 overflow-hidden text-small")= person.status
 if hexletSwitch == "index.html"
-  div(class="d-flex flex-column overflow-hidden bg-white px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
+  div(class="contacts overflow-hidden bg-white px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul(class="contact-list d-flex list-group")
       each letter, index in contacts
