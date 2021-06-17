@@ -42,30 +42,30 @@
   }
 
 if hexletSwitch == "chat.html"
-  div(class="contacts px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
+  div(class="d-flex flex-column overflow-hidden bg-white px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
-    ul(class="contact-list list-group")
+    ul(class="contact-list d-flex list-group")
       each letter, index in contacts
         p(class="contact-abc mb-2 text-muted mt-5")= index
         each person in letter
           li
-            a(href="#" class="contact-card border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
+            a(href="#" class="contact-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
-              div(class="contact-body d-flex flex-grow-1 flex-shrink-1 flex-column")
-                h2(class="contact-name text-bold mb-0")= person.name
-                p(class="contact-status text-small")= person.status
+              div(class="p-4 d-flex flex-grow-1 flex-shrink-1 flex-column")
+                h2(class="contact-text overflow-hidden text-bold mb-0")= person.name
+                p(class="contact-text m-0 overflow-hidden text-small")= person.status
 if hexletSwitch == "index.html"
-  div(class="contacts px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
+  div(class="d-flex flex-column overflow-hidden bg-white px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
-    ul(class="contact-list list-group")
+    ul(class="contact-list d-flex list-group")
       each letter, index in contacts
         p(class="contact-abc mb-2 text-muted mt-5")= index
         each person in letter
           li
-            a(href="#" class="contact-card border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
+            a(href="#" class="contact-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
-              div(class="contact-body d-flex flex-grow-1 flex-shrink-1 flex-column")
-                h2(class="contact-name text-bold mb-0")= person.name
-                p(class="contact-status text-small")= person.status
+              div(class="p-4 d-flex flex-grow-1 flex-shrink-1 flex-column")
+                h2(class="contact-text overflow-hidden text-bold mb-0")= person.name
+                p(class="contact-text m-0 overflow-hidden text-small")= person.status
           
 
