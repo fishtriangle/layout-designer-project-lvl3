@@ -10,18 +10,12 @@
   }
 }
 
-.contact-text {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .contact-card {
   &:hover {
     background-color: $primary;
 
-    .contact-text {
+    .one-stroke {
       color: $white;
     }
   }
 }
-

@@ -42,7 +42,7 @@
   }
 
 if hexletSwitch == "chat.html"
-  div(class="contacts overflow-hidden bg-white px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
+  div(class="overflow-hidden bg-white px-4 pt-5 tab-pane show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul(class="contact-list d-flex list-group")
       each letter, index in contacts
@@ -52,10 +52,10 @@ if hexletSwitch == "chat.html"
             a(href="#" class="contact-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
               div(class="p-4 d-flex flex-grow-1 flex-shrink-1 flex-column")
-                h2(class="contact-text overflow-hidden text-bold mb-0")= person.name
-                p(class="contact-text m-0 overflow-hidden text-small")= person.status
+                h2(class="one-stroke overflow-hidden text-bold mb-0")= person.name
+                p(class="one-stroke m-0 overflow-hidden text-small")= person.status
 if hexletSwitch == "index.html"
-  div(class="contacts overflow-hidden bg-white px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
+  div(class="overflow-hidden bg-white px-4 pt-5 tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab")
     include findform.pug
     ul(class="contact-list d-flex list-group")
       each letter, index in contacts
@@ -65,7 +65,7 @@ if hexletSwitch == "index.html"
             a(href="#" class="contact-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
               img.avatar(src= person.avatar)
               div(class="p-4 d-flex flex-grow-1 flex-shrink-1 flex-column")
-                h2(class="contact-text overflow-hidden text-bold mb-0")= person.name
-                p(class="contact-text m-0 overflow-hidden text-small")= person.status
+                h2(class="one-stroke overflow-hidden text-bold mb-0")= person.name
+                p(class="one-stroke m-0 overflow-hidden text-small")= person.status
           
 
