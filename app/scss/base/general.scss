@@ -5,13 +5,6 @@ body {
   background-color: $gray-base;
 }
 
-.container-xxl {
-  $enable-shadows: true;
-
-  border-color: $gray-base;
-  border-radius: 1rem;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;

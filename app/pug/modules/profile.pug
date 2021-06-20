@@ -30,14 +30,14 @@
     formText: "Поиск по сообщениям"
   }
 
-div(class="profile px-4 pt-5 tab-pane fade bg-white scroll-control-profile" id="profile" role="tabpanel" aria-labelledby="profile-tab")
+div(class="px-4 pt-5 tab-pane fade bg-white scroll-control-profile" id="profile" role="tabpanel" aria-labelledby="profile-tab")
   include findform.pug
   div(class="mt-5 mb-5 d-flex flex-column align-items-center")
-    div(class="profile-name pt-3 mt-1 d-flex flex-column align-items-center w-75")
+    div(class="pt-3 mt-1 d-flex flex-column align-items-center w-75")
       img(src="images/dest/avatar_1.jpg" class="avatar my-3 avatar-big")
       h2(class="text-bold" class="mb-3 text-center") Кодовёнок Хекслетович
       p(class="text-small" class="pb-1 mb-5 text-center text-secondary") Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
-  div(class="profile-social my-2 pt-1 d-flex flex-column align-items-center")
+  div(class="my-2 pt-1 d-flex flex-column align-items-center")
     each contactInf, index in contactData
       each contactItem in contactInf
         if index == "Twitter"

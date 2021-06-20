@@ -59,7 +59,7 @@ if hexletSwitch == "index.html"
     include findform.pug
     ul(class="contact-list d-flex list-group")
       each letter, index in contacts
-        p(class="contact-abc mb-2 text-muted mt-5")= index
+        p(class="mb-2 text-muted mt-5")= index
         each person in letter
           li
             a(href="#" class="contact-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary text-decoration-none mt-2")
