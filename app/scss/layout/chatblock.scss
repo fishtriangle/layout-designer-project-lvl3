@@ -1,19 +1,5 @@
-.chatblock-title {
-  position: sticky;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: hidden;
-  background-color: $white;
-}
-
-.chatblock-title-body {
-  padding: 1.5rem;
-  overflow-x: hidden;
-}
-
 .chatblock-body {
-  height: 85vh;
+  height: 80vh;
 
   @include hide-scrollbar();
 }
@@ -24,15 +10,10 @@
   }
 }
 
-.chatblock-message-body {
-  max-width: 558px;
-}
-
 .chatblock-send {
   position: absolute;
   right: 0;
   bottom: 72px;
-  width: 100%;
 }
 
 @include media-breakpoint-up(lg) {

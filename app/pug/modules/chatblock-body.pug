@@ -38,23 +38,25 @@
     },
   }
 
-div(class="chatblock-title border-bottom shadow-none text-reset text-decoration-none radius-right-top-lg pl-3")
+div(class="position-sticky d-flex flex-row align-items-center overflow-hidden bg-white border-bottom shadow-none text-reset text-decoration-none radius-right-top-lg pl-3")
     img.avatar(src="images/dest/avatar_4.jpg")
-    div(class="chatblock-title-body d-flex flex-grow-1 flex-shrink-1 flex-column")
+    div(class="p-4 overflow-hidden d-flex flex-grow-1 flex-shrink-1 flex-column")
       h2(class="one-stroke overflow-hidden text-bold mb-0") Вениамин Редакторович
       p(class="one-stroke m-0 overflow-hidden text-small p-0") Онлайн
 div(class="chatblock-body p-5")
   each writer, index in chatSourse
     if writer.name == "none"
-      div(class="chatblock-message mb-3 d-flex flex-row align-items-end justify-content-end")
-        img(src= writer.avatar class="avatar mr-3 d-none d-lg-block")
-        div(class="chatblock-message-body bg-primary shadow-sm radius p-4")
-          p(class="pb-2 m-0 border-bottom text-light")= writer.message
-          p(class="pt-1 m-0 text-small text-gray-base")= writer.status
+      div(class="row chatblock-message mb-3 align-items-end justify-content-end")
+        div(class="col-sm-12 col-lg-9 d-flex flex-row")
+          img(src= writer.avatar class="avatar mr-3 d-none d-lg-block")
+          div(class="bg-primary shadow-sm radius p-4")
+            p(class="pb-2 m-0 border-bottom text-light")= writer.message
+            p(class="pt-1 m-0 text-small text-gray-base")= writer.status
     else
-      div(class="chatblock-message mb-3 d-flex flex-row align-items-end")
-        img(src= writer.avatar class="avatar mr-3 d-none d-lg-block")
-        div(class="chatblock-message-body bg-light shadow-sm radius p-4")
-          p(class="mb-1 text-dark text-bold")= writer.name
-          p(class="pb-2 m-0 text-secondary border-bottom-light")= writer.message
-          p(class="pt-1 m-0 text-small text-secondary")= writer.status
+      div(class="chatblock-message mb-3 align-items-end")
+        div(class="col-sm-12 col-lg-9 d-flex flex-row")
+          img(src= writer.avatar class="avatar mr-3 d-none d-lg-block")
+          div(class="bg-light shadow-sm radius p-4")
+            p(class="mb-1 text-dark text-bold")= writer.name
+            p(class="pb-2 m-0 text-secondary border-bottom-light")= writer.message
+            p(class="pt-1 m-0 text-small text-secondary")= writer.status
