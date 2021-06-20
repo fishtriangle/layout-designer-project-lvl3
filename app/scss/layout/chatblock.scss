@@ -1,5 +1,5 @@
 .chatblock-body {
-  height: 80vh;
+  height: calc(100vh - 163px);
 
   @include hide-scrollbar();
 }
@@ -13,11 +13,5 @@
 .chatblock-send {
   position: absolute;
   right: 0;
-  bottom: 72px;
-}
-
-@include media-breakpoint-up(lg) {
-  .chatblock-send {
-    bottom: 8px;
-  }
+  bottom: 0;
 }
