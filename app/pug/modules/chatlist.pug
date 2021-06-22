@@ -31,7 +31,7 @@ if hexletSwitch == "chat.html"
     ul(class="chatlist d-flex list-group mt-5")
       each time, index in chats
         each person in time
-          a(href="#" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary reset text-decoration-none mb-3")
+          a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary reset text-decoration-none mb-3")
             img.avatar(src= person.avatar)
             div(class="p-4 overflow-hidden d-flex flex-grow-1 flex-shrink-1 flex-column")
               .d-flex
@@ -44,7 +44,7 @@ if hexletSwitch == "index.html"
     ul(class="chatlist d-flex list-group mt-5")
       each time, index in chats
         each person in time
-          a(href="#" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary text-decoration-none mb-3")
+          a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-secondary text-decoration-none mb-3")
             img.avatar(src= person.avatar)
             div(class="p-4 overflow-hidden d-flex flex-grow-1 flex-shrink-1 flex-column")
               .d-flex
