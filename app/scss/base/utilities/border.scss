@@ -5,13 +5,13 @@
     @each $value in $sides {
       @if ($value == "all") {
         .border#{$infix} {
-          border: $border-width solid $gray-base !important;
+          border: 1px solid #efefef !important;
         }
       }
 
       @else {
         .border#{$infix}-#{$value} {
-          border-#{$value}: $border-width solid $gray-base !important;
+          border-#{$value}: 1px solid #efefef !important;
         }
       }
     }
@@ -19,13 +19,13 @@
     @each $value in $sides {
       @if ($value == "all") {
         .border#{$infix}-light {
-          border: $border-width solid $light !important;
+          border: 1px solid #fbfbfb !important;
         }
       }
 
       @else {
         .border#{$infix}-#{$value}-light {
-          border-#{$value}: $border-width solid $light !important;
+          border-#{$value}: 1px solid #fbfbfb !important;
         }
       }
     }
@@ -33,13 +33,13 @@
     @each $value in $sides {
       @if ($value == "all") {
         .border#{$infix}-white {
-          border: $border-width solid $white !important;
+          border: 1px solid #fff !important;
         }
       }
 
       @else {
         .border#{$infix}-#{$value}-white {
-          border-#{$value}: $border-width solid $white !important;
+          border-#{$value}: 1px solid #fff !important;
         }
       }
     }

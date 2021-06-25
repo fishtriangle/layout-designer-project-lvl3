@@ -1,3 +1,12 @@
-.hide-scroll {
-  @include chatblock-body();
+.scroll-control-profile {
+  display: flex;
+  height: calc(100vh - 80px);
+
+  @include hide-scrollbar();
+}
+
+@include media-breakpoint-up(lg) {
+  .scroll-control-profile {
+    height: calc(100vh - 138px);
+  }
 }

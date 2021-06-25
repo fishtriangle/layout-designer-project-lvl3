@@ -30,30 +30,31 @@
     formText: "Поиск по сообщениям"
   }
 
-div(class="px-4 pt-5 tab-pane fade bg-white hide-scroll" id="profile" role="tabpanel" aria-labelledby="profile-tab")
-  div(class="d-flex flex-column")
-    include findform.pug
-    div(class="mt-5 mb-5 d-flex flex-column align-items-center")
-      div(class="pt-3 mt-1 d-flex flex-column align-items-center w-75")
-        img(src="images/dest/avatar_1.jpg" class="avatar my-3 avatar-big")
-        h2(class="font-weight-bold h6 mb-1" class="mb-3 text-center") Кодовёнок Хекслетович
-        p(class="small text-secondary" class="pb-1 mb-5 text-center text-secondary") Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
-    div(class="my-2 pt-1 d-flex flex-column align-items-center")
-      each contactInf, index in contactData
-        each contactItem in contactInf
-          if index == "Twitter"
-            div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between")
-              div
-                p(class="small text-secondary m-0")= contactItem.descr
-                p(class="small text-secondary m-0")= contactItem.content
-              div(class="d-flex align-items-center text-secondary")
-                svg.icon-small
-                    use(xlink:href= contactItem.icon)
-          else
-            div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between border-bottom border-gray-base")
-              div
-                p(class="small text-secondary m-0")= contactItem.descr
-                p(class="small text-secondary m-0")= contactItem.content
-              div(class="d-flex align-items-center text-secondary")
-                svg.icon-small
-                    use(xlink:href= contactItem.icon)
+div(class="px-4 pt-5 tab-pane fade bg-white scroll-control-profile" id="profile" role="tabpanel" aria-labelledby="profile-tab")
+  include findform.pug
+  div(class="mt-5 mb-5 d-flex flex-column align-items-center")
+    div(class="pt-3 mt-1 d-flex flex-column align-items-center w-75")
+      img(src="images/dest/avatar_1.jpg" class="avatar my-3 avatar-big")
+      h2(class="font-weight-bold h6 mb-1" class="mb-3 text-center") Кодовёнок Хекслетович
+      p(class="small text-secondary" class="pb-1 mb-5 text-center text-secondary") Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+  div(class="my-2 pt-1 d-flex flex-column align-items-center")
+    each contactInf, index in contactData
+      each contactItem in contactInf
+        if index == "Twitter"
+          div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between")
+            div
+              p(class="small text-secondary m-0")= contactItem.descr
+              p(class="small text-secondary m-0")= contactItem.content
+            div(class="d-flex align-items-center text-secondary")
+              svg.icon-small
+                  use(xlink:href= contactItem.icon)
+        else
+          div(class= "border-gray-base py-2 px-1 w-75 d-flex flex-raw justify-content-between border-bottom border-gray-base")
+            div
+              p(class="small text-secondary m-0")= contactItem.descr
+              p(class="small text-secondary m-0")= contactItem.content
+            div(class="d-flex align-items-center text-secondary")
+              svg.icon-small
+                  use(xlink:href= contactItem.icon)
+
+      
