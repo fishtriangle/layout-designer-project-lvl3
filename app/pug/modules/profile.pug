@@ -30,7 +30,8 @@
     formText: "Поиск по сообщениям"
   }
 
-div(class="px-4 pt-5 tab-pane fade bg-white scroll-control-profile" id="profile" role="tabpanel" aria-labelledby="profile-tab")
+div(class="px-4 pt-5 tab-pane fade bg-white overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab")
+  div(class="d-flex flex-column")
   include findform.pug
   div(class="mt-5 mb-5 d-flex flex-column align-items-center")
     div(class="pt-3 mt-1 d-flex flex-column align-items-center w-75")

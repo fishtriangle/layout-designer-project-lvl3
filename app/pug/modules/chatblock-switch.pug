@@ -1,22 +1,11 @@
 -
   findForm = {
-    formName: "Контакты", 
-    formText: "Поиск по контактам"
+    formName: "Чаты", 
+    formText: "Поиск по сообщениям"
   }
 
 div(class="chatblock tab-pane fade show" id="current-chat" role="tabpanel" aria-labelledby="current-chat-tab")
   div(class="d-md-none position-relative")
     include chatblock.pug
   div(class="d-sm-none d-md-block")
-    div(class="px-4 pt-5")
-      include findform.pug
-      ul(class="contact-list list-group")
-        each letter, index in contacts
-          p(class="mb-2 text-muted mt-5")= index
-          each person in letter
-            li
-              a(href="#" class="contact-card border-gray-base shadow-sm text-decoration-none mt-2")
-                img.avatar(src= person.avatar)
-                div
-                  h2(class="mb-1 one-stroke overflow-hidden font-weight-bold text-dark h6 mb-0")= person.name
-                  p(class="one-stroke m-0 overflow-hidden small text-secondary")= person.status
+    include chatlist.pug
