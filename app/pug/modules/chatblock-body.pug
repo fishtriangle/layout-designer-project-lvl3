@@ -53,10 +53,10 @@ div(class="chatblock-body p-5")
             p(class="pb-2 m-0 border-bottom text-light")= writer.message
             p(class="pt-1 m-0 small text-gray-base")= writer.status
     else
-      div(class="chatblock-message mb-3 align-items-end")
+      div(class="chatblock-message mb-3 align-items-end border-white")
         div(class="col-sm-12 col-lg-9 d-flex flex-row")
           img(src= writer.avatar class="avatar mr-3 d-none d-lg-block")
           div(class="bg-light shadow-sm radius p-4")
             p(class="mb-2 text-dark font-weight-bold h6")= writer.name
-            p(class="pb-2 m-0 text-secondary border-bottom-light")= writer.message
+            p(class="pb-2 m-0 text-secondary border-bottom")= writer.message
             p(class="pt-1 m-0 small text-secondary")= writer.status

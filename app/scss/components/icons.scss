@@ -9,3 +9,17 @@
   height: 1.5rem;
   fill: $white;
 }
+
+.icon-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 42px;
+
+  @include media-breakpoint-up(lg) {
+    .icon-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+    }
+  }
+}
