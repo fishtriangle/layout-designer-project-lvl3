@@ -28,7 +28,7 @@
 if hexletSwitch == "chat.html"
   div(class="overflow-hidden bg-white px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
     include findform.pug
-    ul(class="chatlist d-flex list-group mt-5")
+    ul(class="hide-scroll d-flex list-group mt-5")
       each time, index in chats
         each person in time
           a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm reset text-decoration-none mb-3")
@@ -41,7 +41,7 @@ if hexletSwitch == "chat.html"
 if hexletSwitch == "index.html"
   div(class="overflow-hidden bg-white px-4 pt-5 tab-pane fade show active" id="chats" role="tabpanel" aria-labelledby="chats-tab")
     include findform.pug
-    ul(class="chatlist d-flex list-group mt-5")
+    ul(class="hide-scroll d-flex list-group mt-5")
       each time, index in chats
         each person in time
           a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-decoration-none mb-3")
