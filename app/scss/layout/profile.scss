@@ -1,21 +1,11 @@
-.contact-list {
+.profile {
   height: calc(100vh - #{$h-header} - #{$h-findform});
 
   @include hide-scrollbar();
 }
 
 @include media-breakpoint-up(lg) {
-  .contact-list {
+  .profile {
     height: calc(100vh - #{$h-main-paddings} - #{$h-header} - #{$h-findform});
-  }
-}
-
-.contact-card {
-  &:hover {
-    background-color: $primary;
-
-    .one-stroke {
-      color: $white !important;
-    }
   }
 }

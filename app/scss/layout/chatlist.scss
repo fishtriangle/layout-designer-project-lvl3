@@ -1,12 +1,12 @@
 .chatlist {
-  height: calc(100vh - 290px);
+  height: calc(100vh - #{$h-header} - #{$h-findform});
 
   @include hide-scrollbar();
 }
 
 @include media-breakpoint-up(lg) {
   .chatlist {
-    height: calc(100vh - 262px);
+    height: calc(100vh - #{$h-main-paddings} - #{$h-header} - #{$h-findform});
   }
 }
 

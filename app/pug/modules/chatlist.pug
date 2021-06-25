@@ -28,28 +28,29 @@
 if hexletSwitch == "chat.html"
   div(class="overflow-hidden bg-white px-4 pt-5 tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab")
     include findform.pug
-    ul(class="chatlist d-flex list-group mt-5")
-      each time, index in chats
-        each person in time
-          a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm reset text-decoration-none mb-3")
-            img.avatar(src= person.avatar)
-            div(class="p-4 overflow-hidden d-flex flex-grow-1 flex-shrink-1 flex-column")
-              .d-flex
-                h2(class="mb-1 overflow-hidden one-stroke font-weight-bold text-dark h6 mb-0")= person.name
-                p(class="one-stroke mb-0 ml-auto small text-secondary")= index
-              p(class="m-0 overflow-hidden one-stroke small text-secondary")= person.lastMessage
+    div(class="chatlist")
+      ul(class="d-flex list-group mt-5")
+        each time, index in chats
+          each person in time
+            a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm reset text-decoration-none mb-3")
+              img.avatar(src= person.avatar)
+              div(class="p-4 overflow-hidden d-flex flex-grow-1 flex-shrink-1 flex-column")
+                .d-flex
+                  h2(class="mb-1 overflow-hidden one-stroke font-weight-bold text-dark h6 mb-0")= person.name
+                  p(class="one-stroke mb-0 ml-auto small text-secondary")= index
+                p(class="m-0 overflow-hidden one-stroke small text-secondary")= person.lastMessage
 if hexletSwitch == "index.html"
   div(class="overflow-hidden bg-white px-4 pt-5 tab-pane fade show active" id="chats" role="tabpanel" aria-labelledby="chats-tab")
     include findform.pug
-    ul(class="chatlist d-flex list-group mt-5")
-      each time, index in chats
-        each person in time
-          a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-decoration-none mb-3")
-            img.avatar(src= person.avatar)
-            div(class="p-4 overflow-hidden d-flex flex-grow-1 flex-shrink-1 flex-column")
-              .d-flex
-                h2(class="mb-1 overflow-hidden one-stroke font-weight-bold text-dark h6 mb-0")= person.name
-                p(class="one-stroke mb-0 ml-auto small text-secondary")= index
-              p(class="m-0 overflow-hidden one-stroke small text-secondary")= person.lastMessage
-
+    div(class="chatlist")
+      ul(class="d-flex list-group mt-5")
+        each time, index in chats
+          each person in time
+            a(href="chat.html" class="chatlist-card px-3 d-flex flex-nowrap align-items-center border-left border-right border-bottom border-gray-base shadow-sm text-decoration-none mb-3")
+              img.avatar(src= person.avatar)
+              div(class="p-4 overflow-hidden d-flex flex-grow-1 flex-shrink-1 flex-column")
+                .d-flex
+                  h2(class="mb-1 overflow-hidden one-stroke font-weight-bold text-dark h6 mb-0")= person.name
+                  p(class="one-stroke mb-0 ml-auto small text-secondary")= index
+                p(class="m-0 overflow-hidden one-stroke small text-secondary")= person.lastMessage
 

@@ -1,17 +1,11 @@
 .chatblock-body {
-  height: calc(100vh - 162px);
+  height: calc(100vh - #{$h-chatblock-header} - #{$h-chatblock-send-sm} - #{$h-header});
 
   @include hide-scrollbar();
 }
 
 @include media-breakpoint-up(lg) {
   .chatblock-body {
-    height: 75vh;
+    height: calc(100vh - #{$h-chatblock-header} - #{$h-chatblock-send-lg} - #{$h-main-paddings});
   }
-}
-
-.chatblock-send {
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
